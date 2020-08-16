@@ -39,6 +39,9 @@ clojure {
 		main {
             aotAll()
 //			aotNamespaces = ["net.fabricmc.example.ExampleMod"]
+			compiler {
+				directLinking = true
+			}
 		}
 	}
 }
