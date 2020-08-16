@@ -3,6 +3,6 @@
   (:import (org.spongepowered.asm.mixin.injection.callback CallbackInfo)
            (org.apache.logging.log4j Level)))
 
-(defn exampleMixin-init
-  [this ^CallbackInfo callbackInfo]
+(defn exampleMixin-onInit
+  [this, ^CallbackInfo callbackInfo]
   (exampleMod-log Level/INFO "This line is printed by an example mixin written in Clojure!"))

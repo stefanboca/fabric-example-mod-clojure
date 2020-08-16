@@ -11,6 +11,10 @@
   :prefix "exampleMixin-"
   ; Mixin methods must be defined in another namespace/package otherwise they cannot be referenced directly by spongepowered and an error is thrown
   :impl-ns net.fabricmc.example.impl.ExampleMixinImpl
-  :methods [[^{Inject {:at (At "HEAD") :method "init()V"}} init [org.spongepowered.asm.mixin.injection.callback.CallbackInfo] void]]
+  :methods [[^{Inject {
+                       :at     (At "HEAD")
+                       :method "init()V"}}
+             onInit
+             [org.spongepowered.asm.mixin.injection.callback.CallbackInfo] void]]
   :main false)
 
